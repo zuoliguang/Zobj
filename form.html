@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>zobj</title>
+	<script type="text/javascript" src="./zobj/index.js"></script>
+	<script type="text/javascript" src="./zobj/Controller/form.js"></script>
+</head>
+<body>
+	<form id="formData">
+
+		<!-- 颜色拾取插件 -->
+		<script type="text/javascript" src="./zobj/core/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="./zobj/exp/color/spectrum.css">
+		<script type="text/javascript" src="./zobj/exp/color/spectrum.js"></script>
+		<script type="text/javascript" src="./zobj/exp/color/colorPicker.js"></script>
+		<div>
+			颜色：
+	    	<input id="colorPicker" name='color' value="#eecccc" />
+	    </div>
+
+
+	    <!-- 时间插件1 -->
+	    <script language="javascript" type="text/javascript" src="./zobj/exp/datepicker/WdatePicker.js"></script>
+	    <div>
+	    	时间1：
+	    	<input name="time1" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+	    </div>
+
+
+	    <!-- 时间插件2 -->
+	    <link rel="stylesheet" type="text/css" href="./zobj/exp/calendar/style.css">
+	    <div>
+	    	时间2：
+	    	<input type="text" name="time2" class='ECalendar' id="ECalendar_case3"  value=""/>
+	    </div>
+	    <script language="javascript" type="text/javascript" src="./zobj/exp/calendar/calendar.js"></script>
+	    <script type="text/javascript" src="./zobj/Controller/calendar.js"></script>
+
+
+	    <!-- 下拉选择插件 -->
+	    <link rel="stylesheet" type="text/css" href="./zobj/exp/select/combo.select.css">
+	    <div>
+	    	下拉选择：
+	    	<select class="js-select">
+				<option value="">Select an option</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+				<option>Option 4</option>
+				<option>Option 5</option>
+				<option>Option 6</option>
+			</select>
+	    </div>
+	    <script type="text/javascript" src="./zobj/exp/select/combo.select.js"></script>
+	    <script type="text/javascript" src="./zobj/Controller/select.js"></script>
+
+
+	    <!-- 在线编辑器 -->
+	    <script charset="utf-8" src="./zobj/exp/kindeditor/kindeditor-all-min.js"></script>
+		<script charset="utf-8" src="./zobj/exp/kindeditor/lang/zh-CN.js"></script>
+	    <div>
+	    	在线编辑器：
+	    	<textarea id="editor_id" name="content" style="width:700px;height:300px;">HTML内容</textarea>
+	    </div>
+	    <script>
+	        KindEditor.ready(function(K) {
+	            var editor = K.create('#editor_id');
+				// 设置HTML内容
+				editor.html('test!');
+	            // 取得HTML内容
+				html = editor.html();
+				// alert(html);
+	        });
+		</script>
+
+	    <!-- 提交数据 -->
+	    <a href="javascript:void(0);" id="showData">数据提取</a>
+	</form>
+</body>
+</html>

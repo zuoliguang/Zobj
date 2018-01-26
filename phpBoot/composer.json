@@ -1,0 +1,5 @@
+{
+    "require": {
+        "caoym/phpboot": "^2.0"
+    }
+}
